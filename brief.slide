@@ -1,0 +1,82 @@
+Go Briefly
+Intro to Go Programming Language
+
+Martin Drlík
+
+* Hello, 世界
+Every Go program is made up of packages.
+
+Programs start running in package main.
+.play -edit hello/hello.go
+
+* Functions with multiple results
+.play -edit functions/multipleresults.go
+
+* Functions with multiple results
+.code functions/multipleresultspractical.go
+
+* For
+Go has only one looping construct, the for loop.
+.code for/for.go
+
+* Range
+If you're looping over an array, slice, string, or map, or reading from a channel, a range clause can manage the loop.
+.code for/range.go
+
+* Switch
+Go's switch is more general than C's.
+.code switch/switch.go
+
+* Switch
+There is no automatic fall through, but cases can be presented in comma-separated lists.
+.code switch/noautomaticfallthrough.go
+
+* Defer
+Schedules a function call (the deferred function) to be run immediately before the function executing the defer returns.
+.play defer/defer.go
+
+* Stacking defers
+Deferred function calls are pushed onto a stack. They are executed in LIFO order.
+.play defer/stacking.go
+
+* Defer
+.code defer/practical.go
+
+* Defer
+.play -edit defer/trace.go /START OMIT/,/END OMIT/
+
+* Defer
+.play -edit defer/trace2.go /START OMIT/,/END OMIT/
+
+* Structs
+.play -edit structs/structs.go
+
+* Methods
+A method is a function with a receiver argument.
+.play -edit methods/methods.go
+
+* Interfaces
+An interface type is defined as a set of method signatures.
+.code interfaces/interfaces.go
+
+* Pointers
+Go has pointers. A pointer holds the memory address of a value.
+
+Unlike C, Go has no pointer arithmetic.
+.play -edit pointers/pointers.go
+
+* Pointer receivers
+.play -edit pointerreceivers/pointerreceivers.go
+
+* Choosing a value or pointer receiver
+
+There are two reasons to use a pointer receiver.
+
+The first is so that the method can modify the value that its receiver points to.
+
+The second is to avoid copying the value on each method call. This can be more efficient if the receiver is a large struct, for example.
+
+* Embedding
+.play -edit embedding/embedding.go
+
+* Concurrency
